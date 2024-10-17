@@ -59,7 +59,7 @@ async function fetchProcessByRunPod(data: any): Promise<EndpointIncompleteOutput
 
 ## 其他注意事项
 - 每次修改页面有新的内容后，需要执行 `yarn extract` 命令，将新的文案提取到国际化文件当中,并执行 `yarn translate` 命令将文案翻译为对应语言
-- 如果有新增blog文章也需要执行一下 `yarn translate` 命令将新增的博客内容翻译为对应语言
+- 如果有新增blog文章也需要执行一下 `yarn translate` 命令新将增的博客内容翻译为对应语言
 - 翻译涉及到调用api，需要先申请到api key，然后修改一下scripts/openai-chat.js 当中的api key
 
 
@@ -67,12 +67,14 @@ async function fetchProcessByRunPod(data: any): Promise<EndpointIncompleteOutput
 ### 1. 生成网站内容
 - 直接使用node scripts/generator-website.js 命令生成网站内容(这个命令会指定关键词相关的文案、TDK、博客标题)
 - 需要先修改一下关键词和描述，然后执行命令
-- 
+
  ``` javascript
   // 网站关键词
 const keyword = 'extend image ai'
 // 网站该要描述
-const description = '利用AI技术实现对图片进行扩展，在保证原始图片不变的前提下，扩展四周的内容，且能与原图片保持内容延续性'
+const description = '利用AI技术实现对图片进行扩展，在保证原始图片不变的前提下，扩展四周的内容，且能与原图片保持内容延续性
+```
+
 - 修改config/site.ts当中的配置信息
 
  ```
@@ -102,43 +104,22 @@ const description = '利用AI技术实现对图片进行扩展，在保证原始
 
 - [1.纯 tailwindcss代码组件网站](https://tailspark.co/components)
   > 可以从网站上直接复制某些现成的组件代码完全基于 tw实现
-- [2.纯 tailwindcss代码组件-floatui ](https://floatui.com/components)
-  > 可以从网站上直接复制某些现成的组件代码完全基于 tw实现
-- [3.组件化 UI 框架-nextui.org](https://nextui.org/)
+
+- [2.组件化 UI 框架-nextui.org](https://nextui.org/)
   > 提供基于封装好的组件直接使用
-- [4.表格组件-react-table](https://react-table-library.com/?path=/docs/getting-started-installation--page)
-  > 提供基于封装好的组件直接使用，可以自定义样式，功能上基本能达到 vxe-table的水平
-- [5.icon组件-react-icons](https://react-icons.github.io/react-icons/)
+
+- [3.icon组件-react-icons](https://react-icons.github.io/react-icons/)
   > 提供多套默认 icon图标可以直接用
-- [6.Form集成组件-react-hook-form](https://react-hook-form.com/)
-  > 提供一些常用的表单交互api，便于实现表单的数据收集、回填、校验等
-- [7.日志框架-winston](https://github.com/winstonjs/winston?tab=readme-ov-file#quick-start)
-  > 服务端日志组件
-- [8.Session管理](https://github.com/vvo/iron-session)
-  > iron-session
-- [9.Pricing页面生成](https://shipixen.com/)
+
+- [4.Pricing页面生成](https://shipixen.com/)
   > shipixen
-- [10.国际化](https://lingui.dev/)
+- [5.国际化](https://lingui.dev/)
   > 动态生成国际化文件
-- [11.MDX博客](https://gaudion.dev/blog/nextjs-mdx-blog)
+- [6.MDX博客](https://gaudion.dev/blog/nextjs-mdx-blog)
   > 基于MDX生成博客内容
-- [12.Ant Design](https://ant-design.antgroup.com/components/upload-cn)
-- >基于ant design组件实现的一些UI
-## 数据库表结构更新后的操作
-- 授予创建db的权限
-```sql
--- aioutpaint 是当前项目数据库的用户名
-ALTER ROLE aioutpaint CREATEDB;
-```
-> 本地执行时需要开启代理
-`npx prisma migrate dev --name '说明'`
->
 
 
-## next-auth表结构初始化
-https://authjs.dev/getting-started/adapters/prisma
 ## 解决prisma在vercel构建时提示prisma generate的问题
-
 https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/vercel-caching-issue
 
 # 解决本地无法打开Google登录问题
@@ -166,8 +147,9 @@ https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/verce
 
 ## 版权声明
 - 本项目采用MIT开源协议，请遵守协议内容
-- 如果愿意的话，请帮我的网站留一个链接:https://www.ai-outpainting.com/ 非常感谢！
+- 如果愿意的话，请帮我的网站留一个链接:https://www.ai-outpainting.com/ 非常感谢!
 
 ## 最后
 - 如果项目对你有帮助，请给个star，非常感谢！
 - 有技术问题欢迎添加微信交流：fafafa-ai
+- 小广告：当前ai-outpainting网站，接受付费提交外链，有需要的朋友可以联系我。

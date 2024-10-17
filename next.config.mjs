@@ -67,6 +67,7 @@ const nextConfig = {
     UE_WEB_API_URL:process.env.UE_WEB_API_URL,
     UE_S3_PUBLIC_PATH:process.env.UE_S3_PUBLIC_PATH,
     UE_MQ_API_URL:process.env.UE_MQ_API_URL,
+    AUTH_SECRET:process.env.AUTH_SECRET
   }
 }
 
