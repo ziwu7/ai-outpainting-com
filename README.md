@@ -1,7 +1,7 @@
 # 一套适用于各种AI图片工具站的代码模板
 
 ## 真实网站演示
-- https://www.ai-outpaintig.com
+- https://www.ai-outpainting.com
 ## 网站截图
 - 网站首页
 ![img1.png](./doc/img1.png)
